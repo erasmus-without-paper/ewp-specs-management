@@ -18,7 +18,7 @@ advantages, when it comes to working (and reworking) API design:
  * It follows [a set of quite explicit rules](http://semver.org/). Please get
    familiar with them (especially if you plan to design parts of the APIs).
 
- * Combined with requirement of preparing a explicit and strict API
+ * Combined with the requirement of preparing a explicit and strict API
    specifications, it allows us to easily answer the question: **if it doesn't
    work then who's fault is that?**
 
@@ -65,18 +65,33 @@ does not imply the need of having a changelog for [change proposals]
 diff of the proposed change.
 
 
-XML Schemas or REST?
---------------------
+Preferred Data Format
+---------------------
 
-It is okay for one API to use JSON and be documented in Markdown, while some
-other API uses XML and is documented in XML Schema. We do not put any
-restrictions on the format of the API specifications, but we do have some other
-requirements:
+*The preferred data format is yet to be decided upon.*
 
- * We require all the API specifications to be **explicit and strict**. If any
-   part of the specifications turns out to be vague, then a new version of such
-   specification SHOULD be released, fixing the vague part.
+ * XML?
+ * JSON?
 
- * Try to avoid changing the format of the specification after it has been
-   accepted, as this will "break the diffs".
 
+Preferred Documentation Format
+------------------------------
+
+*The preferred documentation format is yet to be decided upon.*
+
+ * Markdown?
+ * reStructuredText?
+ * JSON Schema?
+ * XML Schema?
+
+However, regardless of what we choose, we do have some requirements on the
+documentation itself:
+
+ * We require all API specifications to be **explicit and strict** (with lots
+   of "MUSTs" and "MUST NOTs" and detailed explanations for all the
+   enumerations used). If any part of the specifications turns out to be vague,
+   then a new version of such specification SHOULD be released, fixing the
+   vague part.
+
+ * Let's try to avoid changing the format of the specification after it has
+   been released, as this will "break the diffs".

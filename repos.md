@@ -17,9 +17,10 @@ documentation for developers:
    to diff the changes in the documentation (e.g. "what has changed between
    versions 1.0.0 and 1.2.7?") is a very important feature.
 
- * GitHub features include an integrated code review tools, issue tracker,
-   change notifications, automated build tools... and many others, all useful
-   in such projects (even in documentation-only projects!).
+ * GitHub features include an integrated code review tools, issue trackers
+   (we have not decided to use GitHub's issue tracker yet!), change
+   notifications, automated build tools... and many others, all useful in such
+   projects (even in documentation-only projects!).
 
 
 Why separate API repositories?
@@ -49,6 +50,5 @@ them in separate GitHub repositories:
      on each API. This allows the partners to easily spot backward-incompatible
      changes which may break their implementations.
 
- * It allows the project leaders to choose separate teams for working with
-   separate APIs. Each team will have its own issue tracker and will be in
-   charge of assigning Git push permissions.
+ * It allows the project leaders to choose and menage separate teams for
+   working with separate APIs.

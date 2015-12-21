@@ -11,7 +11,7 @@ Available statuses
   this document. It has not been approved (nor anyone was asked to approve it),
   but - since it's online - everyone may comment on it.
 
-* **CHANGE PROPOSAL** - A document is a copy of other document with a set of
+* **CHANGE PROPOSAL** - A document is a copy of another document with a set of
   changes applied. The partners are asked to comment on the *changed* parts of
   the document.
 
@@ -37,7 +37,7 @@ The status of a document is determined from its **location and context**:
    **RELEASED**.
 
  * If a document has been tagged with a Git version tag, but there exists a
-   newer tag of this document, then its status is **OBSOLETE**.
+   newer tag of this document, then its status is **OUTDATED**.
 
  * If a document has been merged into the `stable` branch of one of the
    official repositories - then the status of this documented is **RELEASE
