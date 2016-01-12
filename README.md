@@ -211,10 +211,15 @@ Document statuses
 * **RELEASED** - All partners have approved the document and it has been
   assigned a version number (e.g. 1.0.0).
 
+Additionally, RELEASED documents may also be:
+
 * **OUTDATED** - The document has been made obsolete by a newer release (and
   the newer release MAY be backward-incompatible with this document).
 
-If you're having trouble, taking a look [here][develhub] might also help.
+* **DEPRECATED** - The document is at its latest version, but the entire API
+  (described by this document) has been deprecated, and probably replaced by
+  some other API. Such documents SHOULD explain (inside their contents) *why*
+  they are deprecated, and which other APIs replace them.
 
 
 ### How to determine the status of a document?
@@ -229,6 +234,10 @@ The status of a document is determined from its **location and context**:
  * If a document has been tagged with a Git version tag, but there exists a
    newer release tag of its repository, then the document's status is
    **OUTDATED**.
+
+ * The document is **DEPRECATED** only when its *latest release* explicitly
+   states that its contents are deprecated. (This also means that it *is*
+   possible to *undeprecate* a document.)
 
  * If a document has been merged into the `stable` branch of one of the
    official repositories - then the status of this documented is **RELEASE
