@@ -163,6 +163,9 @@ keyboard shortcuts](https://help.github.com/articles/using-keyboard-shortcuts/))
    with API, then this also means that a new XML namespace will be created (and
    newer versions of XML documents will be required to use this namespace).
 
+ * Unreleased (draft) APIs also SHOULD use valid GitHub URLs for theirs XML
+   namespaces (most probably, URLs referring to the `master` branch).
+
 
 ### Changelogs (aka Release Notes)
 
