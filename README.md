@@ -181,7 +181,7 @@ diff of the proposed change.
 
 *WRTODO: The preferred data format is yet to be decided upon.*
 
- * XML? (our recommendation)
+ * XML? (our current pick)
  * JSON?
 
 
@@ -189,10 +189,10 @@ diff of the proposed change.
 
 *WRTODO: The preferred documentation format is yet to be decided upon.*
 
- * Markdown? (our recommendation)
+ * Markdown? (our current pick)
  * reStructuredText?
  * JSON Schema?
- * XML Schema? (our recommendation)
+ * XML Schema? (our current pick)
 
 Regardless of what we choose, we do have some requirements on the documentation
 itself:
