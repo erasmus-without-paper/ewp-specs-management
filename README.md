@@ -147,6 +147,23 @@ keyboard shortcuts](https://help.github.com/articles/using-keyboard-shortcuts/))
    [Rules for Submitting API Change Proposals](#change-proposals) section.
 
 
+### XML namespaces and branches
+
+ * All released specifications MUST be merged to a `stable-v<N>` branch, where
+   *N* is the major version number of the specification (ideally, *N* will
+   stay equal to `1` for the majority of all specifications).
+
+ * XML namespaces used throughout the project SHOULD "self-describe"
+   themselves. Namespace values SHOULD be valid GitHub URLs, pointing to
+   `stable-*` GitHub branches. Every XML document SHOULD conform to the
+   specification described in the `stable-*` branch given in its XML namespace.
+
+ * Major changes in API versions SHOULD lead to a new `stable-*` (e.g.
+   `stable-v2`) branch being created. If there is any XML namespace associated
+   with API, then this also means that a new XML namespace will be created (and
+   newer versions of XML documents will be required to use this namespace).
+
+
 ### Changelogs (aka Release Notes)
 
 Once a document is [released][statuses], every subsequent release of such
@@ -239,11 +256,11 @@ The status of a document is determined from its **location and context**:
    states that its contents are deprecated. (This also means that it *is*
    possible to *undeprecate* a document.)
 
- * If a document has been merged into the `stable` branch of one of the
+ * If a document has been merged into the `stable-*` branch of one of the
    official repositories - then the status of this documented is **RELEASE
    CANDIDATE**.
 
- * If a document has not been merged into the `stable` branch yet, but there
+ * If a document has not been merged into the `stable-*` branch yet, but there
    already exists an appropriate open pull request for its merging - then the
    status of this documented is **CHANGE PROPOSAL**.
 
