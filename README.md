@@ -290,9 +290,10 @@ Rules for Submitting API Change Proposals
 
 ### How to get my draft (or change proposal) released?
 
-You CANNOT assume that all partners are watching all of the issues. You
-MUST contact all the partners and attempt to get their approval before you can
-deem your proposal as ready to be released.
+You CANNOT assume that all partners are watching all of the issues. You MUST
+contact all the partners (see the *EWP Partners and Developers* section below)
+and attempt to get their approval before you can deem your proposal as ready to
+be released.
 
  * Only trivial changes of already implemented APIs may be merged without
    asking for the approval of the other partners.
@@ -314,18 +315,40 @@ deem your proposal as ready to be released.
    comment on this diff somewhere.
 
 
-EWP Partner Developers
-----------------------
+EWP Partners and Developers
+---------------------------
 
-This is the list of developers who are allowed to accept the API change
-proposals in the name of a partner:
+While the EWP Project lasts, new specifications will be drafted and released.
+This requires all the partners to agree on the contents of these
+specifications. Every partner will provide its representatives - developers
+which will accept specifications in the name of the partner.
 
-* **Poland**:
+Some other developers may have some special or additional duties (which should
+also be a part of the common knowledge).
 
-  * Wojciech Rygielski - rygielski@mimuw.edu.pl
-  * Michał Kurzydłowski - michalk@mimuw.edu.pl
+We intend to keep this list here, as part of this document.
 
-* *(WRTODO: full list of the partners)*
+
+### Poland
+
+ * Wojciech Rygielski - `rygielski@mimuw.edu.pl`. GitHub username:
+   [wrygiel](https://github.com/wrygiel)
+   
+   **Additional duties:** I am in charge of the [developer's pages][develhub]
+   and keeping the EWP specifications clean, up-to-date and (if possible)
+   backward-compatible. I will also be keeping track of which partners have
+   accepted which documents. In general, I won't be taking part in implementing
+   the Polish *EWP Host*, but I will probably be implementing the EWP Registry
+   Service.
+    
+ * Michał Kurzydłowski - `michalk@mimuw.edu.pl`. GitHub username:
+   [Awerin](https://github.com/Awerin).
+   
+   **Additional duties:** Michał will be accepting EWP specifications on behalf
+   of Poland, but he will also be implementing a set of common libraries which
+   other partners may be wanting to use.
+
+*(WRTODO: full list of the partners)*
 
 
 Relevant external documents
