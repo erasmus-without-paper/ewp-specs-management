@@ -12,16 +12,17 @@ proposals, etc.).
 The Structure of EWP Repositories
 ---------------------------------
 
-### How documentation is divided?
+### How documentation is to be divided?
 
- * Each section of the documentation is stored in **separate repository**.
+ * Separate sections of the documentation SHOULD be stored in **separate
+   Git repositories**.
 
- * The index of all documents (along with their current statuses) can be found
-   [at this URL][develhub]. This index SHOULD be frequently updated.
+ * The index of all documents (along with their current statuses) SHOULD be
+   kept [at this URL][develhub]. If SHOULD be frequently updated.
 
- * Some of these documents will probably not change much after their first
-   release, while some others (like the APIs) will probably keep mutating
-   (perhaps even after the project is finished - in a backward-compatible way).
+Some of these repositories will probably not change much after their first
+release, while some others (like the APIs) will probably keep mutating perhaps
+even after the project is finished (though, in a backward-compatible way).
 
 
 ### Why separate API repositories?
@@ -29,11 +30,11 @@ The Structure of EWP Repositories
 We chose to split EWP requirements into a couple of separate APIs, and host
 them in separate GitHub repositories:
 
- * We believe that all partners should have the option to implement just
-   a **subset** of all the features we have documented. This will make it
-   easier for them to start off, claim that they have parts of EWP properly
-   implemented, and then implement other parts later (possibly *much* later,
-   by other team of developers).
+ * We believe that partners (this includes all the **future** partners) should
+   have the option to implement just a **subset** of all the features we have
+   documented. This will make it easier for them to start off, claim that they
+   have parts of EWP properly implemented, and then implement other parts later
+   (possibly *much* later, with other teams of developers).
 
  * Having each API in **separate repository** has some great advantages, when
    it comes to versioning:
@@ -50,17 +51,19 @@ them in separate GitHub repositories:
      for each API. This allows the partners to easily spot
      backward-incompatible changes which may break their implementations.
 
- * It even allows the project leaders to choose and manage separate teams for
+ * It allows the project leaders to choose and manage separate teams for
    working with separate APIs.
 
 
 ### Why GitHub?
 
-We chose to use Git and GitHub as the primary tool for working and hosting API
-documentation for developers:
+We chose to use Git and GitHub as the primary tool for working and hosting
+*documentation for developers*:
 
  * All developers are familiar with Git. Many developers are also familiar with
-   GitHub.
+   GitHub. **We will require developers to review and accept documentation
+   often** throughout the project. We believe that these tools will help them
+   with this task.
 
  * Git allows us to easily keep track of all the changes. Having the option
    to produce a set of changes between particular versions of the documentation
@@ -68,8 +71,10 @@ documentation for developers:
    important feature, and it can be easily achieved with Git.
 
  * GitHub features include an integrated code review tools, issue trackers,
-   change notifications, automated build tools - and many others, all useful in
-   such projects (even in "documentation-only" projects).
+   change notifications, automated build tools - and many other features. We
+   are aware that our most of the repositories will be hosting documentation
+   only, but we do find all these tools useful even in documentation-only
+   projects.
 
 
 Issue tracker
@@ -104,28 +109,19 @@ We will use **Semantic Versioning** for releases of EWP technical
 documentation. It has enormous advantages, when it comes to working (and
 reworking) API design:
 
- * It allows us to tag specific API versions as officially approved.
+ * We will assign documents their version numbers only after they are
+   officially approved.
 
- * It allows the developers to easily determine when a breaking change occurs
-   in a particular API, and adapt properly.
+ * Semantic versioning scheme allows developers to easily determine when a
+   breaking change occurs in a particular API.
 
  * It follows [a set of quite explicit rules](http://semver.org/). Please get
    familiar with them (especially if you plan to design parts of the APIs).
 
- * Combined with the requirement of preparing an explicit and strict API
-   specifications, it allows us to easily answer the question: **if it doesn't
-   work then who's fault is that?**
-
-
-### Use permalinks!
-
-Whenever you post a link to a document somewhere, you SHOULD use a Git tag
-name (or a commit ID) in the posted URL. You should avoid posting links to the
-`master` branch (which can mutate, even to the point of having the link
-broken).
-
-Try pressing <kbd>y</kbd> key on GitHub site to get a permalink ([other useful
-keyboard shortcuts](https://help.github.com/articles/using-keyboard-shortcuts/)).
+ * Having a single, official latest version of the document, combined with the
+   requirement of preparing an explicit and strict API specifications, allows us
+   to easily answer the question: **if it doesn't work then who's fault is
+   that?**
 
 
 ### Backward-compatibility
@@ -140,14 +136,16 @@ keyboard shortcuts](https://help.github.com/articles/using-keyboard-shortcuts/))
    implementers.
 
  * Once a document is [released][statuses], backward-incompatible changes
-   SHOULD be avoided (if possible).
+   SHOULD be avoided. Once first implementations are deployed on production
+   servers, backward-incompatible changes MUST NOT occur, unless they cannot be
+   avoided.
 
  * All non-trivial changes (especially the backward-incompatible ones) must go
    through the proposal acceptance process, as described in the
    [Rules for Submitting API Change Proposals](#change-proposals) section.
 
 
-### XML namespaces and branches
+### Git branches (and XML namespaces)
 
  * All released specifications MUST be merged to a `stable-v<N>` branch, where
    *N* is the major version number of the specification (ideally, *N* will
@@ -169,15 +167,15 @@ keyboard shortcuts](https://help.github.com/articles/using-keyboard-shortcuts/))
 
 ### Changelogs (aka Release Notes)
 
-Once a document is [released][statuses], every subsequent release of such
-document MUST be accompanied by a *changelog*. All changes SHOULD be noted in
-this changelog (and *backward-incompatible* changes should be additionally
-highlighted).
+ * Once a document is [released][statuses], every subsequent release of such
+   document MUST be accompanied by a *changelog*. All changes SHOULD be noted
+   in this changelog (and *backward-incompatible* changes should be
+   additionally highlighted).
 
 Please note, that this requirement is for **released** documents only, and it
-does not imply the need of having a changelog for [change proposals]
-[statuses]. Before accepting a proposal, a partner SHOULD review the full
-diff of the proposed change.
+does not imply the need of having a detailed changelog made for every [change
+proposal][statuses] (although many change proposals MAY be accompanied by such
+change logs).
 
 
 ### Preferred Data Formats
@@ -210,64 +208,58 @@ itself:
    been first released (as this would "break the diffs").
 
 
+### Use permalinks!
+
+Whenever you post a link to a specific version of a document somewhere, you
+SHOULD use a Git tag name (or a commit ID) in the posted URL. You should avoid
+posting links to the `master` branch (which can mutate, even to the point of
+having the link broken).
+
+*Hint:* Try pressing <kbd>y</kbd> key on GitHub site to get a permalink ([other
+useful keyboard shortcuts](https://help.github.com/articles/using-keyboard-shortcuts/)).
+
+
 <a name="statuses"></a>
 
 Document statuses
 -----------------
 
-### Available statuses
+Before you read any EWP document on GitHub, make sure you know the status of
+this document. An index of official documents and drafts is kept [here]
+[develhub]. You can also attempt determine the status yourself based the
+document's **location and context**.
 
-* **DRAFT** - designers are still working on this document. It has not been
-  approved, but everyone may comment on it.
+Common document statuses include (but are not limited to):
 
-* **CHANGE PROPOSAL** - A document is a copy of another document with a set of
-  changes applied. The partners are asked to comment on the *changed* parts of
-  the document (e.g. when compared to the latest release).
+ * **RELEASED** - All partners have approved the document and it has been
+   assigned a version number (e.g. `1.0.0`) in one of the official project
+   repositories.
 
-* **RELEASE CANDIDATE** - All partners have approved the contents of the
-  document, but it has not been officially released yet (it has no version
-  number assigned).
+   * If there is no newer release of this document (no version with a greater
+     tag name) then it is a **Latest release**.
 
-* **RELEASED** - All partners have approved the document and it has been
-  assigned a version number (e.g. 1.0.0).
+   * If there exists a newer release of this document, then its status is
+     **OUTDATED**. The latest release MAY be backward-incompatible with this
+     document.
 
-Additionally, RELEASED documents may also be:
+   * It is also possible for a document to be at its latest release, but the
+     entire API (described by this document) has been **DEPRECATED**, and
+     probably replaced by some other API. Such documents MUST explain (inside
+     their contents) *why* they are deprecated, and which other APIs replace
+     them. (Note, that this definition does not prohibit to *undeprecate* a
+     document.)
 
-* **OUTDATED** - The document has been made obsolete by a newer release (and
-  the newer release MAY be backward-incompatible with this document).
+ * **CHANGE PROPOSAL** - A document is a copy of another document with a set of
+   changes applied. The partners are asked to comment on the *changed* parts of
+   the document (e.g. when compared to the latest release).
 
-* **DEPRECATED** - The document is at its latest version, but the entire API
-  (described by this document) has been deprecated, and probably replaced by
-  some other API. Such documents SHOULD explain (inside their contents) *why*
-  they are deprecated, and which other APIs replace them.
+   Change proposals may appear outside of the official repositories (i.e. in
+   forks). They are often accompanied by open pull requests for merging them to
+   official `stable-*` branches.
 
-
-### How to determine the status of a document?
-
-The status of a document is determined from its **location and context**:
-
- * If a document has been tagged with a Git version tag (such as `v1.0.0`)
-   in one of the official repositories, and there is no newer release of this
-   document (no version with a greater tag name) then its status is
-   **RELEASED**.
-
- * If a document has been tagged with a Git version tag, but there exists a
-   newer release tag of its repository, then the document's status is
-   **OUTDATED**.
-
- * The document is **DEPRECATED** only when its *latest release* explicitly
-   states that its contents are deprecated. (This also means that it *is*
-   possible to *undeprecate* a document.)
-
- * If a document has been merged into the `stable-*` branch of one of the
-   official repositories - then the status of this documented is **RELEASE
-   CANDIDATE**.
-
- * If a document has not been merged into the `stable-*` branch yet, but there
-   already exists an appropriate open pull request for its merging - then the
-   status of this documented is **CHANGE PROPOSAL**.
-
- * In all other cases - the document is a **DRAFT**.
+ * **DRAFT** - designers are still working on this document. It has not been
+   approved, but everyone may comment on it. After being reviewed and accepted,
+   drafts become releases.
 
 "Official repositories" are the ones owned by the **erasmus-without-paper**
 GitHub organization.
@@ -278,37 +270,22 @@ GitHub organization.
 Rules for Submitting API Change Proposals
 -----------------------------------------
 
-### How to propose a change to a [draft][statuses] API?
+### How to propose a change to a document?
 
- * Option 1. Start a new thread in our issue tracker (WRTODO: put a link to the
-   tracker here.) Please make sure to select a proper project and assign a
+ * **Option 1.** Start a new thread in our issue tracker (WRTODO: put a link to
+   the tracker here.) Please make sure to select a proper project and assign a
    proper category to your ticket.
 
-   The author of the API (and all other watchers) SHOULD watch for changes in
-   their projects and should be notified when you submit a new issue to the
-   tracker.
+   The authors and maintainers of the APIs MUST subscribe for GitHub
+   notifications for their projects, and should be notified when you submit a
+   new issue to the tracker.
 
- * Option 2. You can also fork the repository, change what you want changed,
-   and send a GitHub pull request. Since it's a draft, the author may merge
-   such pull requests at will (he doesn't need to consult any of the partners
-   yet).
+ * **Option 2.** You MAY also fork the repository, change what you want
+   changed, and send a GitHub pull request.
 
    If your pull request is complicated, consider creating a separate issue page
    for tracking it. Pull requests are NOT the proper place for longer
-   discussions - these SHOULD be conducted within the issue tracker.
-
-
-### How to propose a change to [released][statuses] API?
-
- * If you're not the API author, just do the same, as with the draft APIs
-   (described above).
-
- * If you are the API author yourself, you can push your proposed changes to a
-   separate branch (or fork), then issue yourself a pull request.
-
- * Only trivial changes of accepted APIs may be merged without asking for the
-   approval of the other partners. All non-trivial proposals SHOULD be accepted
-   before merging them.
+   discussions - such discussions SHOULD be conducted within the issue tracker.
 
 
 ### How to get my draft (or change proposal) released?
@@ -316,6 +293,9 @@ Rules for Submitting API Change Proposals
 You CANNOT assume that all partners are watching all of the issues. You
 MUST contact all the partners and attempt to get their approval before you can
 deem your proposal as ready to be released.
+
+ * Only trivial changes of already implemented APIs may be merged without
+   asking for the approval of the other partners.
 
  * [Breaking changes](https://en.wiktionary.org/wiki/breaking_change) to
    existing [releases][statuses] MUST be explicitly accepted by all
@@ -326,15 +306,12 @@ deem your proposal as ready to be released.
    "veto" was received), but this time span SHOULD be extended if there is
    reason to suspect some partners may don't like the change.
 
- * Upgrading [draft][statuses] to a [release candidate][statuses] MUST be
+ * Upgrading [draft][statuses] to a [release candidate][statuses] SHOULD be
    explicitly accepted by all the partners.
 
- * Release candidates will be periodically upgraded to releases (and assigned
-   version numbers) by project managers.
-
  * All [change proposals][statuses] SHOULD be accompanied by a pull request.
-   Partners MUST be able to review a diff of all changes, and comment on this
-   diff.
+   Partners MUST be able to review a diff of all changes, and be allowed to
+   comment on this diff somewhere.
 
 
 EWP Partner Developers
