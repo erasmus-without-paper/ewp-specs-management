@@ -72,7 +72,7 @@ We chose to use Git and GitHub as the primary tool for working and hosting
 
  * GitHub features include an integrated code review tools, issue trackers,
    change notifications, automated build tools - and many other features. We
-   are aware that our most of the repositories will be hosting documentation
+   are aware that most of our repositories will be hosting documentation
    only, but we do find all these tools useful even in documentation-only
    projects.
 
