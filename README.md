@@ -81,17 +81,26 @@ Issue tracker
 -------------
 
 GitHub offers built-in issue tracking which should be entirely sufficient for
-purposes of developing the software and its documentation. By design, every
-GitHub project can have its own separate issue tracker, but we have decided to
-use **only one** (to avoid confusion with possibly repeated issue numbers).
+purposes of developing the software and its documentation.
 
-Our official issue tracker can be found here:
+Every GitHub project may have its own separate issue tracker, and we have
+chosen to stick to this design decision. In other words, we will use **multiple
+issue trackers**. When you're reading documentation on GitHub and you find a
+bug, simply scroll to the top of the page, and click the *Issues* tab.
 
-https://github.com/erasmus-without-paper/issues/issues
+Pros:
 
-It's worth noting that WP6 was planning to use Redmine for their own purposes.
-This might mean that we'll end up with two separate issue trackers. You may
-discuss this issue [here](https://github.com/erasmus-without-paper/issues/issues/1).
+ * We keep project's issues along with the project's code.
+ * The *Issues* tab is always around.
+
+Cons:
+
+ * Issue numbers will not be unique within the entire EWP Project. When
+   cross-referencing issues between sub-projects, absolute issue URLs will need
+   to be used. However, since WP6 will also use a separate issue tracker (and
+   we were [unable to share it]
+   (https://github.com/erasmus-without-paper/general-issues/issues/1)), the
+   issue numbers would not be unique *in either case*.
 
 
 Rules for API Design and Versioning
@@ -266,12 +275,11 @@ Rules for Submitting API Change Proposals
 
 ### How to propose a change to a document?
 
- * **Option 1.** Start a new thread in our [issue tracker]
-   (https://github.com/erasmus-without-paper/issues/issues). Please make sure
-   to assign fitting labels to your issue.
+ * **Option 1.** Start a new thread in the issue tracker associated with this
+   document (search for the *Issues* tab on the top of the GitHub page).
 
    The authors and maintainers of the APIs SHOULD subscribe for GitHub's issue
-   notifications, and should be notified when you submit a new issue to the
+   notifications, and should be notified when you submit a new issue to their
    tracker.
 
  * **Option 2.** You MAY also [fork](https://guides.github.com/activities/forking/)
@@ -327,17 +335,17 @@ We intend to keep this list here, as part of this document.
 
  * Wojciech Rygielski - `rygielski@mimuw.edu.pl`. GitHub username:
    [wrygiel](https://github.com/wrygiel)
-   
+
    **Additional duties:** I am in charge of the [developer's pages][develhub]
    and keeping the EWP specifications clean, up-to-date and (if possible)
    backward-compatible. I will also be keeping track of which partners have
    accepted which documents. In general, I won't be taking part in implementing
    the Polish *EWP Host*, but I will probably be implementing the EWP Registry
    Service.
-    
+
  * Michał Kurzydłowski - `michalk@mimuw.edu.pl`. GitHub username:
    [Awerin](https://github.com/Awerin).
-   
+
    **Additional duties:** Michał will be accepting EWP specifications on behalf
    of Poland, but he will also be implementing a set of common libraries which
    other partners may be wanting to use.
