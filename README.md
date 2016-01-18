@@ -80,24 +80,18 @@ We chose to use Git and GitHub as the primary tool for working and hosting
 Issue tracker
 -------------
 
-*WRTODO: The location of the issue tracker is yet to be agreed upon.*
+GitHub offers built-in issue tracking which should be entirely sufficient for
+purposes of developing the software and its documentation. By design, every
+GitHub project can have its own separate issue tracker, but we have decided to
+use **only one** (to avoid confusion with possibly repeated issue numbers).
 
-GitHub offers built-in issue tracking which would be entirely sufficient for
-purposes of developing the software and its documentation. However:
+Our official issue tracker can be found here:
 
- * There are also other (external) issue trackers which would also suffice for
-   this particular purpose.
+https://github.com/erasmus-without-paper/issues/issues
 
- * If GitHub turns out to be NOT sufficient for other parts of the EWP project
-   (and developers are not the only ones who need issue tracking) - then we
-   SHOULD try to find a common solution which would play out well for everyone.
-
- * We SHOULD have only one issue tracker. Having multiple issue trackers might
-   lead to confusion. E.g. a term "issue #123" might become ambiguous.
-
- * Some WPs declared that they will be using Redmine for their own purposes.
-   We believe it would in everyone's best interest if we at least tried to use
-   the same Redmine instance for tracking our issues too.
+It's worth noting that WP6 was planning to use Redmine for their own purposes.
+This might mean that we'll end up with two separate issue trackers. You may
+discuss this issue [here](https://github.com/erasmus-without-paper/issues/issues/1).
 
 
 Rules for API Design and Versioning
@@ -272,16 +266,16 @@ Rules for Submitting API Change Proposals
 
 ### How to propose a change to a document?
 
- * **Option 1.** Start a new thread in our issue tracker (WRTODO: put a link to
-   the tracker here.) Please make sure to select a proper project and assign a
-   proper category to your ticket.
+ * **Option 1.** Start a new thread in our [issue tracker]
+   (https://github.com/erasmus-without-paper/issues/issues). Please make sure
+   to assign fitting labels to your issue.
 
-   The authors and maintainers of the APIs MUST subscribe for GitHub
-   notifications for their projects, and should be notified when you submit a
-   new issue to the tracker.
+   The authors and maintainers of the APIs SHOULD subscribe for GitHub's issue
+   notifications, and should be notified when you submit a new issue to the
+   tracker.
 
- * **Option 2.** You MAY also fork the repository, change what you want
-   changed, and send a GitHub pull request.
+ * **Option 2.** You MAY also [fork](https://guides.github.com/activities/forking/)
+   the repository, change what you want changed, and send a pull request.
 
    If your pull request is complicated, consider creating a separate issue page
    for tracking it. Pull requests are NOT the proper place for longer
