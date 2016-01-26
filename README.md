@@ -183,32 +183,35 @@ change logs).
 
 ### Preferred Data Formats
 
-*WRTODO: The preferred data format is yet to be decided upon.*
+We have decided for XML to be the **primary** data exchange format in our APIs.
 
- * XML? (our current pick)
- * JSON?
+It is possible for some APIs to use some other data formats (especially if the
+format is a well-established one, for exchanging some particular type of data),
+but whenever in doubt, we SHOULD choose a format based on XML (and validatable
+by XML Schema).
 
 
 ### Preferred Documentation Format
 
-*WRTODO: The preferred documentation format is yet to be decided upon.*
+We have decided for Markdown and XML Schema to be our **primary** documentation
+formats.
 
- * Markdown? (our current pick)
- * reStructuredText?
- * JSON Schema?
- * XML Schema? (our current pick)
+ * **Markdown** - because it is very easy to understand even when displayed
+   *raw*. This makes it a very good language to be reviewed in Git diffs.
 
-Regardless of what we choose, we do have some requirements on the documentation
-itself:
+ * **XML Schema** - because it is a well-established documentation format for
+   XML, and makes it easier for developers to confirm that their documents meet
+   the requirements.
 
- * We require all API specifications to be **explicit and strict** (with lots
-   of "MUSTs" and "MUST NOTs" and detailed explanations for all the
-   enumerations used). If any part of the specifications turns out to be vague,
-   then a new version of such specification SHOULD be released, fixing the
-   vague part.
 
- * Let's try to avoid changing the format of the specification after it has
-   been first released (as this would "break the diffs").
+### Preferred Documentation Style
+
+We require all API specifications to be **explicit and strict** - with lots
+of "MUSTs" and "MUST NOTs" (as defined in [RFC 2119]
+(https://www.ietf.org/rfc/rfc2119.txt)) and detailed explanations for all
+the enumerations used). If any part of the specifications turns out to be
+vague, then a new version of such specification SHOULD be released, fixing the
+vague part.
 
 
 ### Use permalinks!
@@ -270,7 +273,7 @@ GitHub organization.
 
 <a name='change-proposals'></a>
 
-Rules for Submitting API Change Proposals
+Rules for Accepting API Change Proposals
 -----------------------------------------
 
 ### How to propose a change to a document?
@@ -292,29 +295,39 @@ Rules for Submitting API Change Proposals
 
 ### How to get my draft (or change proposal) released?
 
-You CANNOT assume that all partners are watching all of the issues. You MUST
-contact all the partners (see the *EWP Partners and Developers* section below)
-and attempt to get their approval before you can deem your proposal as ready to
-be released.
+These rules apply to developers with write-permissions to official EWP
+repositories. Developers MUST follow these rules whenever they want to release
+a new version of a document.
 
- * Only trivial changes of already implemented APIs may be merged without
-   asking for the approval of the other partners.
+ * All [change proposals][statuses] SHOULD be accompanied by a [pull request]
+   (https://help.github.com/articles/using-pull-requests/). Partners MUST be
+   able to review a diff of all changes, and be allowed to comment on this diff
+   somewhere.
 
- * [Breaking changes](https://en.wiktionary.org/wiki/breaking_change) to
-   existing [releases][statuses] MUST be explicitly accepted by all
-   the partners.
+   * This is also true when releasing [drafts][statuses] - e.g. if the draft is
+     present in the `master` branch, then you should issue yourself a pull
+     request to the `stable-*` branch.
 
- * Non-breaking changes to existing releases MAY be deemed as implicitly
-   accepted no sooner than **1 week** after they have been proposed (and no
-   "veto" was received), but this time span SHOULD be extended if there is
-   reason to suspect some partners may don't like the change.
+ * Only trivial changes of already implemented APIs may be released without
+   previously asking for the review of the other partners.
 
- * Upgrading [draft][statuses] to a [release candidate][statuses] SHOULD be
-   explicitly accepted by all the partners.
+ * You CANNOT assume that all partners are watching all GitHub issues and/or
+   pull requests. Whenever you mean to contact the partners, you MUST do so
+   either directly, or via the technical@erasmuswithoutpaper.eu mailing list.
 
- * All [change proposals][statuses] SHOULD be accompanied by a pull request.
-   Partners MUST be able to review a diff of all changes, and be allowed to
-   comment on this diff somewhere.
+ * Whenever you contact the partners and ask for their review, you MAY give
+   them a **deadline** for such review. After such deadline is reached, it MAY
+   be assumed that all the partners who did not respond gave you their
+   approval.
+
+   * Deadlines should vary on the nature of the change. E.g. A one-week
+     deadline might be enough for non-breaking changes, but
+     [breaking changes](https://en.wiktionary.org/wiki/breaking_change) to
+     [already released][statuses] documents may need a longer deadline.
+
+   * If there is a strong reason to suspect that some partners may don't like
+     the change (e.g. you know the implementation has already started), you
+     SHOULD attempt to contact them directly and get their *explicit* approval.
 
 
 EWP Partners and Developers
@@ -351,14 +364,6 @@ We intend to keep this list here, as part of this document.
    other partners may be wanting to use.
 
 *(WRTODO: full list of the partners)*
-
-
-Relevant external documents
----------------------------
-
- * [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) - strict definitions of
-   keywords such as "MUST" and "SHOULD" (which we will use throughout all the
-   documents).
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
