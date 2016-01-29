@@ -183,25 +183,31 @@ change logs).
 
 ### Preferred Data Formats
 
-We have decided for XML to be the **primary** data exchange format in our APIs.
+We are inclined to use XML as our primary data exchange format. We might be
+persuaded towards JSON however. Further inquiry will be conducted and decisions
+will be released in future versions of this document.
 
-It is possible for some APIs to use some other data formats (especially if the
-format is a well-established one, for exchanging some particular type of data),
-but whenever in doubt, we SHOULD choose a format based on XML (and validatable
-by XML Schema).
+Regardless of what we choose, it is possible for some APIs to use some other
+data formats than the "primary" ones (especially if the format is a
+well-established one, for exchanging some particular type of data).
 
 
 ### Preferred Documentation Format
 
-We have decided for Markdown and XML Schema to be our **primary** documentation
-formats.
+We have decided to use Markdown for text documentation. We will also use schema
+languages (such as XML Schema or JSON Schema) for describing data formats in
+detail.
 
  * **Markdown** - because it is very easy to understand even when displayed
    *raw*. This makes it a very good language to be reviewed in Git diffs.
 
  * **XML Schema** - because it is a well-established documentation format for
    XML, and makes it easier for developers to confirm that their documents meet
-   the requirements.
+   the requirements. Schema validators are already built into many programming
+   languages.
+
+ * **JSON Schema** - not (yet?) so popular, but there are multiple validators
+   on the web, available for many programming languages.
 
 
 ### Preferred Documentation Style
@@ -328,42 +334,6 @@ a new version of a document.
    * If there is a strong reason to suspect that some partners may don't like
      the change (e.g. you know the implementation has already started), you
      SHOULD attempt to contact them directly and get their *explicit* approval.
-
-
-EWP Partners and Developers
----------------------------
-
-While the EWP Project lasts, new specifications will be drafted and released.
-This requires all the partners to agree on the contents of these
-specifications. Every partner will provide its representatives - developers
-which will accept specifications in the name of the partner.
-
-Some other developers may have some special or additional duties (which should
-also be a part of the common knowledge).
-
-We intend to keep this list here, as part of this document.
-
-
-### Poland
-
- * Wojciech Rygielski - `rygielski@mimuw.edu.pl`. GitHub username:
-   [wrygiel](https://github.com/wrygiel)
-
-   **Additional duties:** I am in charge of the [developer's pages][develhub]
-   and keeping the EWP specifications clean, up-to-date and (if possible)
-   backward-compatible. I will also be keeping track of which partners have
-   accepted which documents. In general, I won't be taking part in implementing
-   the Polish *EWP Host*, but I will probably be implementing the EWP Registry
-   Service.
-
- * Michał Kurzydłowski - `michalk@mimuw.edu.pl`. GitHub username:
-   [Awerin](https://github.com/Awerin).
-
-   **Additional duties:** Michał will be accepting EWP specifications on behalf
-   of Poland, but he will also be implementing a set of common libraries which
-   other partners may be wanting to use.
-
-*(WRTODO: full list of the partners)*
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
