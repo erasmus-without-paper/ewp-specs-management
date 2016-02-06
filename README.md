@@ -337,5 +337,5 @@ a new version of a document.
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
-[statuses]: https://github.com/erasmus-without-paper/ewp-specs-management/blob/master/README.md#statuses
-[backward-compatibility-rules]: https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/master/README.md#backward-compatibility-rules
+[statuses]: https://github.com/erasmus-without-paper/ewp-specs-management/blob/stable-v1/README.md#statuses
+[backward-compatibility-rules]: https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/README.md#backward-compatibility-rules
