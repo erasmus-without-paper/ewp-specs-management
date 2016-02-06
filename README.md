@@ -60,8 +60,8 @@ them in separate GitHub repositories:
 We chose to use Git and GitHub as the primary tool for working and hosting
 *documentation for developers*:
 
- * All developers are familiar with Git. Many developers are also familiar with
-   GitHub. **We will require developers to review and accept documentation
+ * Many developers are familiar with Git. Many developers are also familiar
+   with GitHub. **We will require developers to review and accept documentation
    often** throughout the project. We believe that these tools will help them
    with this task.
 
@@ -122,9 +122,9 @@ reworking) API design:
    familiar with them (especially if you plan to design parts of the APIs).
 
  * Having a single, official latest version of the document, combined with the
-   requirement of preparing an explicit and strict API specifications, allows us
-   to easily answer the question: **if it doesn't work then who's fault is
-   that?**
+   requirement of preparing an explicit and strict API specifications, allows
+   us to easily answer the question: **if something breaks then what should be
+   fixed - the client or the server?**
 
 
 ### Backward-compatibility
@@ -328,7 +328,7 @@ a new version of a document.
      [breaking changes](https://en.wiktionary.org/wiki/breaking_change) to
      [already released][statuses] documents may need a longer deadline.
 
-   * If there is a strong reason to suspect that some partners may don't like
+   * If there is a strong reason to suspect that some partners may not like
      the change (e.g. you know the implementation has already started), you
      SHOULD attempt to contact them directly and get their *explicit* approval.
 
