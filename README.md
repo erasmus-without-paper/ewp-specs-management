@@ -183,20 +183,20 @@ change logs).
 
 ### Preferred Data Formats
 
-We are inclined to use XML as our primary data exchange format. We might be
-persuaded towards JSON however. Further inquiry will be conducted and decisions
-will be released in future versions of this document.
+We have [decided](https://github.com/erasmus-without-paper/general-issues/issues/2)
+to use XML as our primary data exchange format.
 
-Regardless of what we choose, it is possible for some APIs to use some other
-data formats than the "primary" ones (especially if the format is a
-well-established one, for exchanging some particular type of data).
+"Primary" not necessarilly means "the only one". It is still possible for some
+APIs to use other data formats (especially if the format is a well-established
+one, for exchanging some particular type of data). However, XML-based formats
+will be preferred.
 
 
 ### Preferred Documentation Format
 
-We have decided to use Markdown for text documentation. We will also use schema
-languages (such as XML Schema or JSON Schema) for describing data formats in
-detail.
+We have [decided](https://github.com/erasmus-without-paper/general-issues/issues/2)
+to use Markdown for text documentation, and XML Schema for describing data
+formats in detail.
 
  * **Markdown** - because it is very easy to understand even when displayed
    *raw*. This makes it a very good language to be reviewed in Git diffs.
@@ -205,9 +205,6 @@ detail.
    XML, and makes it easier for developers to confirm that their documents meet
    the requirements. Schema validators are already built into many programming
    languages.
-
- * **JSON Schema** - not (yet?) so popular, but there are multiple validators
-   on the web, available for many programming languages.
 
 
 ### Preferred Documentation Style
