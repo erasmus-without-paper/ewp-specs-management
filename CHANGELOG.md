@@ -4,8 +4,8 @@ Release notes
 This document describes all the changes made to the *Working with EWP Technical
 Documentation* document, starting from its first released version.
 
-Next version (WRTODO: 1.1.0? unreleased)
-----------------------------------------
+1.1.0
+-----
 
 * Indicate XML as the primary data exchange format
   ([details](https://github.com/erasmus-without-paper/general-issues/issues/2)).
