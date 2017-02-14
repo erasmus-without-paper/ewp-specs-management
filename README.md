@@ -127,6 +127,27 @@ reworking) API design:
    fixed - the client or the server?**
 
 
+<a name="server-favoritism"></a>
+
+### We "favor" server implementers
+
+When designing APIs to be implemented by multiple partners, we believe it is
+generally profitable to slightly favor making the job **easier for server
+implementers**, rather than making it easier for the client implementers.
+
+If our APIs are simple to implement for the servers, then it **maximizes the
+chances** that all such API implementations are **100% compatible** with the
+specifications (and with each other).
+
+It's true, that this often means more work for the clients. If you are
+implementing a client, you might keep asking yourself questions like *Why do I
+need to make two requests instead of one here?*, or *Why we don't have any
+sophisticated search filters to use in this API?*, etc. However, **the
+important thing to appreciate here is** that you can reasonably expect all
+different partner servers to work in the same way, **because** these
+specifications are made simpler for them.
+
+
 ### Backward-compatibility
 
  * As required by the rules of [semantic versioning](http://semver.org/), all
