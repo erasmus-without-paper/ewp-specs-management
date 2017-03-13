@@ -4,6 +4,15 @@ Release notes
 This document describes all the changes made to the *Working with EWP Technical
 Documentation* document, starting from its first released version.
 
+
+1.1.1
+-----
+
+* Explain why it's safer to design APIs in a way which makes it easier for the
+  server implementers (*We "favor" server implementers* section). Discuss [here]
+  (https://github.com/erasmus-without-paper/ewp-specs-management/issues/4).
+
+
 1.1.0
 -----
 
