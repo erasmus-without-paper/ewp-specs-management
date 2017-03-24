@@ -98,8 +98,7 @@ Cons:
  * Issue numbers will not be unique within the entire EWP Project. When
    cross-referencing issues between sub-projects, absolute issue URLs will need
    to be used. However, since WP6 will also use a separate issue tracker (and
-   we were [unable to share it]
-   (https://github.com/erasmus-without-paper/general-issues/issues/1)), the
+   we were [unable to share it](https://github.com/erasmus-without-paper/general-issues/issues/1)), the
    issue numbers would not be unique *in either case*.
 
 
@@ -155,9 +154,9 @@ specifications are made simpler for them.
    backward-incompatible changes) SHOULD force the **major** API version number
    to be increased (e.g. `1.3.7` should become `2.0.0`).
 
- * API designers MUST take care of [backward-compatibility rules]
-   [backward-compatibility-rules], to facilitate predictable workflow for all
-   implementers.
+ * API designers MUST take care of
+   [backward-compatibility rules][backward-compatibility-rules], to facilitate
+   predictable workflow for all implementers.
 
  * Once a document is [released][statuses], backward-incompatible changes
    SHOULD be avoided. Once first implementations are deployed on production
@@ -231,8 +230,8 @@ formats in detail.
 ### Preferred Documentation Style
 
 We require all API specifications to be **explicit and strict** - with lots
-of "MUSTs" and "MUST NOTs" (as defined in [RFC 2119]
-(https://www.ietf.org/rfc/rfc2119.txt)) and detailed explanations for all
+of "MUSTs" and "MUST NOTs" (as defined in
+[RFC 2119](https://www.ietf.org/rfc/rfc2119.txt)) and detailed explanations for all
 the enumerations used). If any part of the specifications turns out to be
 vague, then a new version of such specification SHOULD be released, fixing the
 vague part.
@@ -255,8 +254,8 @@ Document statuses
 -----------------
 
 Before you read any EWP document on GitHub, make sure you know the status of
-this document. An index of official documents and drafts is kept [here]
-[develhub]. You can also attempt determine the status yourself based the
+this document. An index of official documents and drafts is kept
+[here][develhub]. You can also attempt determine the status yourself based the
 document's **location and context**.
 
 Common document statuses include (but are not limited to):
@@ -323,8 +322,8 @@ These rules apply to developers with write-permissions to official EWP
 repositories. Developers MUST follow these rules whenever they want to release
 a new version of a document.
 
- * All [change proposals][statuses] SHOULD be accompanied by a [pull request]
-   (https://help.github.com/articles/using-pull-requests/). Partners MUST be
+ * All [change proposals][statuses] SHOULD be accompanied by a
+   [pull request](https://help.github.com/articles/using-pull-requests/). Partners MUST be
    able to review a diff of all changes, and be allowed to comment on this diff
    somewhere.
 
