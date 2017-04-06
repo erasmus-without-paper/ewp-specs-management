@@ -185,7 +185,11 @@ specifications are made simpler for them.
    newer versions of XML documents will be required to use this namespace).
 
  * Unreleased (draft) APIs also SHOULD use valid GitHub URLs for theirs XML
-   namespaces (most probably, URLs referring to the `master` branch).
+   namespaces. They MAY use URLs referring to the `master` branch, but they
+   also MAY use URLs referring to the - not yet existing - `stable-v1` branch
+   (for forward-compatibility). This DOES NOT mean that you can have draft
+   changes in `stable-v1` branch - it only means that you can use `stable-v1`
+   *XML namespace* in your `master` branch.
 
 
 ### Changelogs (aka Release Notes)
