@@ -5,6 +5,14 @@ This document describes all the changes made to the *Working with EWP Technical
 Documentation* document, starting from its first released version.
 
 
+1.2.0
+-----
+
+* Allow drafts to use the `stable-v1` XML namespace (even though no such GitHub
+  branch exists yet). This will make the transition from version `0.x.y` to
+  `1.0.0` a bit easier.
+
+
 1.1.1
 -----
 
