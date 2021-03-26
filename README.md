@@ -340,7 +340,7 @@ a new version of a document.
 
  * You CANNOT assume that all partners are watching all GitHub issues and/or
    pull requests. Whenever you mean to contact the partners, you MUST do so
-   either directly, or via the technical@erasmuswithoutpaper.eu mailing list.
+   directly.
 
  * Whenever you contact the partners and ask for their review, you MAY give
    them a **deadline** for such review. After such deadline is reached, it MAY
