@@ -18,7 +18,7 @@ The Structure of EWP Repositories
    Git repositories**.
 
  * The index of all documents (along with their current statuses) SHOULD be
-   kept [at this URL][develhub]. If SHOULD be frequently updated.
+   kept [at this URL][develhub]. It SHOULD be frequently updated.
 
 Some of these repositories will probably not change much after their first
 release, while some others (like the APIs) will probably keep mutating perhaps
@@ -97,9 +97,7 @@ Cons:
 
  * Issue numbers will not be unique within the entire EWP Project. When
    cross-referencing issues between sub-projects, absolute issue URLs will need
-   to be used. However, since WP6 will also use a separate issue tracker (and
-   we were [unable to share it](https://github.com/erasmus-without-paper/general-issues/issues/1)), the
-   issue numbers would not be unique *in either case*.
+   to be used.
 
 
 Rules for API Design and Versioning
